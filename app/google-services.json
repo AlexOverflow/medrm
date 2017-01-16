@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1063706756753",
+    "firebase_url": "https://medrm-5950f.firebaseio.com",
+    "project_id": "medrm-5950f",
+    "storage_bucket": "medrm-5950f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063706756753:android:5f68f519dddd13ae",
+        "android_client_info": {
+          "package_name": "ru.mrsu.medrm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063706756753-hs5heiio9sejelgbn3pvcmqvtmerk928.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.mrsu.medrm",
+            "certificate_hash": "581CACD4B5C840D41192EC6AF37522EB4E263F06"
+          }
+        },
+        {
+          "client_id": "1063706756753-qvgbl3oucu256qc1d7sq7hmnesdjj3b3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB80-4fzbOBnaVd2Ark2uvc48FiMMsc0TE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063706756753-qvgbl3oucu256qc1d7sq7hmnesdjj3b3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
