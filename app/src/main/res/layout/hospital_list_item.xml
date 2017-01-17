@@ -11,17 +11,17 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:typeface="sans"
-        android:text="Городская государственная больница N4 "/>
+       />
 
     <TextView
-        android:id="@+id/reporter"
+        android:id="@+id/address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
         android:layout_marginTop="5dip"
         android:textColor="#343434"
         android:textSize="12sp"
-        android:text="г. Саранск пр. Ленина д34 кв5"/>
+       />
 
 
 

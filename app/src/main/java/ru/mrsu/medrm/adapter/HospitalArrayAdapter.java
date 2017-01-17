@@ -20,20 +20,19 @@ public class HospitalArrayAdapter extends ArrayAdapter<Hospital> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-       /* // Get the data item for this position
+        // Get the data item for this position
         Hospital hospital = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.hospital_list_item, parent, false);
         }
         // Lookup view for data population
-        TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
-        TextView tvHome = (TextView) convertView.findViewById(R.id.tvHome);
+        TextView titleTextView = (TextView) convertView.findViewById(R.id.title);
+        TextView addressTextView = (TextView) convertView.findViewById(R.id.address);
         // Populate the data into the template view using the data object
-        tvName.setText(.name);
-        tvHome.setText(user.hometown);
+        titleTextView.setText(hospital.getTitle());
+        addressTextView.setText(hospital.getAddress());
         // Return the completed view to render on screen
-        return convertView;*/
-        return null;
+        return convertView;
     }
 }
