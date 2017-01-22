@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public enum FirebaseTreeNode implements Serializable {
     HOSPITALS("hospitals"), SERVICES("services"),
-    SCHEDULE("schedule"), DOCTORS_SERVICE("doctor-service");
+    SCHEDULE("schedule"), DOCTORS_SERVICE("doctors-service");
 
     private String nodeKey;
 

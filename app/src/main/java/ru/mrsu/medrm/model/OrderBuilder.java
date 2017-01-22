@@ -49,4 +49,15 @@ public class OrderBuilder implements Serializable {
     public void setServicePrice(String servicePrice) {
         this.servicePrice = servicePrice;
     }
+
+    @Override
+    public String toString() {
+        return "OrderBuilder{" +
+                "hospitalTitle='" + hospitalTitle + '\'' +
+                ", serviceTitle='" + serviceTitle + '\'' +
+                ", servicePrice='" + servicePrice + '\'' +
+                ", doctorName='" + doctorName + '\'' +
+                ", date='" + date + '\'' +
+                '}';
+    }
 }

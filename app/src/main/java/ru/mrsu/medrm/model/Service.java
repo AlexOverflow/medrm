@@ -21,4 +21,12 @@ public class Service {
     public void setPrice(String price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Service{" +
+                "title='" + title + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
 }
