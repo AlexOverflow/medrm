@@ -5,7 +5,7 @@ package ru.mrsu.medrm.model;
 public class Hospital {
     private String title;
     private String address;
-    private String phone;
+    private String phoneNumber;
 
     public String getTitle() {
         return title;
@@ -23,12 +23,12 @@ public class Hospital {
         this.address = address;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
@@ -36,7 +36,7 @@ public class Hospital {
         return "Hospital{" +
                 "title='" + title + '\'' +
                 ", address='" + address + '\'' +
-                ", phone='" + phone + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
 }

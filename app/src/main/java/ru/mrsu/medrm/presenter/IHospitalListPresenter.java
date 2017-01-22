@@ -1,11 +1,12 @@
 package ru.mrsu.medrm.presenter;
 
-
-import java.util.List;
-
+import ru.mrsu.medrm.adapter.HospitalArrayAdapter;
 import ru.mrsu.medrm.model.Hospital;
+import ru.mrsu.medrm.model.OrderBuilder;
 
 public interface IHospitalListPresenter {
 
-    List<Hospital> getHospitalsListList();
+    void setHospitalsList(HospitalArrayAdapter adapter);
+    void orderPrepare(OrderBuilder builder, Hospital hospital);
+
 }
