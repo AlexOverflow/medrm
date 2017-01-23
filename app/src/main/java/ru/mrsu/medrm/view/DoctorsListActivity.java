@@ -42,10 +42,11 @@ public class DoctorsListActivity extends ListActivity implements IDoctorsListVie
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         Doctor doctor = adapter.getItem(position);
-        presenter.orderPrepare(orderBuilder, doctor);
-        Intent i = new Intent(this, OrderPlaceActivity.class);
+        Intent i = new Intent();
         i.putExtra("order", orderBuilder);
-        startActivity(i);
+        i.putExtra("doctor", doctor);
+        setResult(RESULT_OK, i);
+        finish();
     }
 
     @Override

@@ -1,7 +1,9 @@
 package ru.mrsu.medrm.model;
 
 
-public class Service {
+import java.io.Serializable;
+
+public class Service implements Serializable {
 
     private String title;
     private String price;

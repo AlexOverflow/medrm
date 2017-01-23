@@ -2,6 +2,8 @@ package ru.mrsu.medrm.model;
 
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class OrderBuilder implements Serializable {
     private String hospitalTitle;
@@ -9,6 +11,11 @@ public class OrderBuilder implements Serializable {
     private String servicePrice;
     private String doctorName;
     private String date;
+
+    private Hospital hospital;
+    private Service service;
+    private Doctor doctor;
+
 
     public String getHospitalTitle() {
         return hospitalTitle;
@@ -50,6 +57,30 @@ public class OrderBuilder implements Serializable {
         this.servicePrice = servicePrice;
     }
 
+    public Hospital getHospital() {
+        return hospital;
+    }
+
+    public void setHospital(Hospital hospital) {
+        this.hospital = hospital;
+    }
+
+    public Service getService() {
+        return service;
+    }
+
+    public void setService(Service service) {
+        this.service = service;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
     @Override
     public String toString() {
         return "OrderBuilder{" +
@@ -59,5 +90,15 @@ public class OrderBuilder implements Serializable {
                 ", doctorName='" + doctorName + '\'' +
                 ", date='" + date + '\'' +
                 '}';
+    }
+
+    public Order buildOrder() {
+        Order order = new Order();
+        order.setDoctor(hospital.getAddress());
+        order.setDoctor(doctor.getName());
+        order.setPrice(service.getPrice());
+        SimpleDateFormat format = new SimpleDateFormat("MM:DD:HH:mm:ss");
+        order.setDateCreated(format.format(Calendar.getInstance().getTime()));
+        return order;
     }
 }

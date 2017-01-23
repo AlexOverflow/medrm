@@ -31,8 +31,8 @@ public class DoctorsListPresenter implements IDoctorsListPresenter {
         OrderBuilder builder = view.getOrderBuilder();
         List<String> tree = new LinkedList<>();
         tree.add(FirebaseTreeNode.DOCTORS_SERVICE.toString());
-        tree.add(builder.getHospitalTitle());
-        tree.add(builder.getServiceTitle());
+        tree.add(builder.getHospital().getTitle());
+        tree.add(builder.getService().getTitle());
         return tree;
     }
 

@@ -1,8 +1,9 @@
 package ru.mrsu.medrm.model;
 
 
+import java.io.Serializable;
 
-public class Hospital {
+public class Hospital implements Serializable{
     private String title;
     private String address;
     private String phoneNumber;

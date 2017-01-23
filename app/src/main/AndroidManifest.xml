@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.mrsu.medrm">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +20,9 @@
         <activity android:name=".MenuActivity" />
         <activity android:name=".view.ServicesListActivity" />
         <activity android:name=".view.DoctorsListActivity" />
-        <activity android:name=".view.OrderPlaceActivity"></activity>
+        <activity android:name=".view.OrderPlaceActivity" />
+        <activity android:name=".view.HospitalsListActivity" />
+        <activity android:name=".view.TimeOrderSelectionActivity"></activity>
     </application>
 
 </manifest>

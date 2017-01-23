@@ -2,20 +2,11 @@ package ru.mrsu.medrm.model;
 
 import java.io.Serializable;
 
-public class Doctor implements Serializable {
+public class Schedule implements Serializable {
 
-    private String name;
     private String startTime;
     private String endTime;
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    private String time;
 
     public String getStartTime() {
         return startTime;
@@ -33,13 +24,20 @@ public class Doctor implements Serializable {
         this.endTime = endTime;
     }
 
-    @Override
-    public String toString() {
-        return "Doctor{" +
-                "name='" + name + '\'' +
-                ", startTime='" + startTime + '\'' +
-                ", endTime='" + endTime + '\'' +
-                '}';
+    public String getTime() {
+        return time;
     }
 
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    @Override
+    public String toString() {
+        return "Schedule{" +
+                "startTime='" + startTime + '\'' +
+                ", endTime='" + endTime + '\'' +
+                ", time='" + time + '\'' +
+                '}';
+    }
 }

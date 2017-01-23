@@ -17,4 +17,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hospital_label">Больница</string>
+    <string name="service_label">Услуга</string>
+    <string name="doctor_label">Врач</string>
+    <string name="data_label">Дата</string>
+    <string name="time_label">Время</string>
+    <string name="order_create_button">Записаться</string>
+    <string name="create_order">записаться на прием</string>
 </resources>

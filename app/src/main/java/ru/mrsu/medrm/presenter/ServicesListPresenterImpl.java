@@ -32,9 +32,9 @@ public class ServicesListPresenterImpl implements IServicesListPresenter {
         List<String> nodeList = new LinkedList<>();
         nodeList.add(FirebaseTreeNode.SERVICES.toString());
 
-        Log.v(LOG_TAG, builder.getHospitalTitle());
+        Log.v(LOG_TAG, builder.getHospital().getTitle());
 
-        nodeList.add(builder.getHospitalTitle());
+        nodeList.add(builder.getHospital().getTitle());
         return nodeList;
 
     }

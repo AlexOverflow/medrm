@@ -48,10 +48,12 @@ public class ServicesListActivity extends ListActivity implements IServicesListV
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         Service service  = (Service) adapter.getItem(position);
-        presenter.prepareOrder(orderBuilder, service);
-        Intent i = new Intent(this, DoctorsListActivity.class);
+        Intent i = new Intent();
         i.putExtra("order", orderBuilder);
-        startActivity(i);
+        i.putExtra("service", service);
+        setResult(RESULT_OK, i);
+        finish();
+
     }
 
     public OrderBuilder getOrderBuilder() {
