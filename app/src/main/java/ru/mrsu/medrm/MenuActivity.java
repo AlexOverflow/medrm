@@ -1,5 +1,6 @@
 package ru.mrsu.medrm;
 
+import android.preference.PreferenceFragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import ru.mrsu.medrm.view.HospitalsListActivity;
 import ru.mrsu.medrm.view.OrderPrepareFragment;
+import ru.mrsu.medrm.view.OrdersListFragment;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -48,17 +50,22 @@ public class MenuActivity extends AppCompatActivity {
                 //Closing drawer on item click
                 drawerLayout.closeDrawers();
 
+                OrderPrepareFragment fragment = new OrderPrepareFragment();
+                OrdersListFragment listFragment = new OrdersListFragment();
+                android.support.v4.app.FragmentTransaction fragmentTransaction =
+                        getSupportFragmentManager().beginTransaction();
+
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId()){
-
-
                     //Replacing the main content with ContentFragment Which is our Inbox View;
+
                     case R.id.inbox:
-                        OrderPrepareFragment fragment = new OrderPrepareFragment();
-                        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.frame, fragment);
                         fragmentTransaction.commit();
                         return true;
+                    case R.id.inbox2:
+                        fragmentTransaction.replace(R.id.frame, listFragment);
+                        fragmentTransaction.commit();
                     default:
                         return true;
 

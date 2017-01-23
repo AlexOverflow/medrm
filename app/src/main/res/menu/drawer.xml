@@ -8,5 +8,11 @@
             android:checked="false"
             android:icon="@drawable/ic_inbox_black"
             android:title="@string/create_order" />
+
+        <item
+            android:id="@+id/inbox2"
+            android:checked="false"
+            android:icon="@drawable/ic_inbox_black"
+            android:title="@string/orders_list" />
     </group>
 </menu>

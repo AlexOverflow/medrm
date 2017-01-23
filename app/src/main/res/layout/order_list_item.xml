@@ -7,27 +7,35 @@
     android:padding="5dip">
 
     <TextView
-        android:id="@+id/doctor_name"
+        android:id="@+id/order_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
+        android:paddingTop="0dp"
+        tools:text="test address"
+        android:textSize="15sp"
         android:typeface="sans"
-        android:textSize="18sp"
-        tools:text="Иванов Иван иванович"
         />
 
     <TextView
-        android:id="@+id/doctor_work_time"
+        android:id="@+id/order_doctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
-        android:layout_marginTop="25dip"
+        android:layout_marginTop="5dip"
+        android:paddingTop="20dp"
         android:textColor="#343434"
-        android:textSize="20sp"
-        android:padding="15dp"
-        tools:text="15:30 -- 16:00"
+        tools:text="test wizion"
+        android:textSize="12sp"
         />
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="test price"
+        android:paddingTop="50dp"
+        android:id="@+id/order_price" />
 
 
 </RelativeLayout>
