@@ -1,11 +1,15 @@
 package ru.mrsu.medrm.model;
 
 
-public class Order {
+import java.io.Serializable;
 
+public class Order implements Serializable {
+
+    private String hospitalTitle;
     private String address;
     private String doctor;
     private String price;
+    private String date;
     private String dateCreated;
 
     public String getAddress() {
@@ -38,5 +42,21 @@ public class Order {
 
     public void setDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getHospitalTitle() {
+        return hospitalTitle;
+    }
+
+    public void setHospitalTitle(String hospitalTitle) {
+        this.hospitalTitle = hospitalTitle;
     }
 }

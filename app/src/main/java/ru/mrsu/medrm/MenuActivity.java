@@ -1,6 +1,8 @@
 package ru.mrsu.medrm;
 
+import android.content.Intent;
 import android.preference.PreferenceFragment;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,7 +14,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import ru.mrsu.medrm.view.HospitalsListActivity;
+import ru.mrsu.medrm.view.LoginFormActivity;
 import ru.mrsu.medrm.view.OrderPrepareFragment;
 import ru.mrsu.medrm.view.OrdersListFragment;
 
@@ -21,16 +27,20 @@ public class MenuActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+    private FirebaseAuth auth;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        auth = FirebaseAuth.getInstance();
 
         // Initializing Toolbar and setting it as the actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         //Initializing NavigationView
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
@@ -66,6 +76,13 @@ public class MenuActivity extends AppCompatActivity {
                     case R.id.inbox2:
                         fragmentTransaction.replace(R.id.frame, listFragment);
                         fragmentTransaction.commit();
+                        return true;
+                    case R.id.inbox3:
+                        auth.signOut();
+                        Intent i = new Intent(MenuActivity.this, LoginFormActivity.class);
+                        startActivity(i);
+                        finish();
+                        return true;
                     default:
                         return true;
 

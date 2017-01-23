@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.mrsu.medrm">
 
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,10 +10,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.LoginFormActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -22,7 +21,10 @@
         <activity android:name=".view.DoctorsListActivity" />
         <activity android:name=".view.OrderPlaceActivity" />
         <activity android:name=".view.HospitalsListActivity" />
-        <activity android:name=".view.TimeOrderSelectionActivity"></activity>
+        <activity android:name=".view.TimeOrderSelectionActivity" />
+        <activity android:name=".view.RegFormActivity" />
+        <activity android:name=".view.ResetPasswordActivity" />
+
     </application>
 
 </manifest>

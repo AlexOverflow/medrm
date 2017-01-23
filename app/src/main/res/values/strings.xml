@@ -25,4 +25,36 @@
     <string name="order_create_button">Записаться</string>
     <string name="create_order">записаться на прием</string>
     <string name="orders_list">список заявок</string>
+
+
+    <string name="action_sign_in_short">Зарегистрироваться</string>
+    <string name="email">Email</string>
+    <string name="minimum_password">Парольс лишком коротки. Не менее 6 символов</string>
+    <string name="auth_failed">Ошибка авторизации, проверте логин и пароль</string>
+    <string name="change_email">Change Email</string>
+    <string name="change_password">Change Password</string>
+    <string name="send_password_reset_email">Send Password reset email</string>
+    <string name="remove_user">Remove user</string>
+    <string name="new_pass">New Password</string>
+    <string name="title_activity_profile">Firebase</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_link_to_register">Зарегистрироваться в MedRM</string>
+    <string name="btn_link_to_login">Я уже зарегистрирован. Войти</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="btn_forgot_password">Забыли пороль?</string>
+    <string name="btn_reset_password">Сбросить пароль</string>
+    <string name="btn_back"><![CDATA[<< Назад]]></string>
+    <string name="hint_new_email">New Email</string>
+    <string name="btn_change">Change</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_remove">Remove</string>
+    <string name="btn_sign_out">Sign Out</string>
+    <string name="lbl_forgot_password">Забыли пороль?</string>
+    <string name="forgot_password_msg">Введите электронный адрес на который будет выслан новый пороль.</string>
+    <string name="sing_out">выход</string>
+    <string name="delete_order_button">Удалить запись</string>
 </resources>

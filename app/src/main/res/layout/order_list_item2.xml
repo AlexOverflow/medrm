@@ -4,15 +4,14 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:padding="5dip">
+    android:padding="15dip">
 
     <TextView
-        android:id="@+id/order_address"
+        android:id="@+id/order_hospital_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:paddingTop="0dp"
-        tools:text="test address"
+        tools:text="test addresshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
         android:textSize="15sp"
         android:typeface="sans"
         />
@@ -23,18 +22,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
         android:layout_marginTop="5dip"
-        android:paddingTop="20dp"
+        android:paddingTop="40dp"
         android:textColor="#343434"
         tools:text="test wizion"
         android:textSize="12sp"
         />
 
     <TextView
-        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="test price"
-        android:paddingTop="50dp"
+        android:paddingTop="70dp"
         android:id="@+id/order_price" />
 
 

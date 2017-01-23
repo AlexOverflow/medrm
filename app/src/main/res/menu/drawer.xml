@@ -14,5 +14,10 @@
             android:checked="false"
             android:icon="@drawable/ic_inbox_black"
             android:title="@string/orders_list" />
+        <item
+            android:id="@+id/inbox3"
+            android:checked="false"
+            android:icon="@drawable/ic_inbox_black"
+            android:title="@string/sing_out" />
     </group>
 </menu>

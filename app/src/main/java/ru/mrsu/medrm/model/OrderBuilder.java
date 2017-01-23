@@ -94,9 +94,11 @@ public class OrderBuilder implements Serializable {
 
     public Order buildOrder() {
         Order order = new Order();
-        order.setDoctor(hospital.getAddress());
+        order.setHospitalTitle(hospital.getTitle());
+        order.setAddress(hospital.getAddress());
         order.setDoctor(doctor.getName());
         order.setPrice(service.getPrice());
+        order.setDate(date);
         SimpleDateFormat format = new SimpleDateFormat("MM:DD:HH:mm:ss");
         order.setDateCreated(format.format(Calendar.getInstance().getTime()));
         return order;

@@ -11,7 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.text.SimpleDateFormat;
@@ -73,7 +75,8 @@ public class OrderPrepareFragment extends Fragment {
         timeEditText = (EditText) v.findViewById(R.id.time_place);
         finishButton = (Button)  v.findViewById(R.id.finish_button);
 
-        dateFormatter = new SimpleDateFormat("dd-MM-HH-MM", Locale.US);
+        dateFormatter = new SimpleDateFormat("MM-dd dd-MM-yyyy HH-mm-ss-SSS", Locale.US);
+        final SimpleDateFormat dateFormatterSimp = new SimpleDateFormat(" dd/MM/yyyy", Locale.US);
 
         initEditsArray();
         hospitalEditText.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +122,7 @@ public class OrderPrepareFragment extends Fragment {
                                 Calendar newDate = Calendar.getInstance();
                                 newDate.set(year, monthOfYear, dayOfMonth);
                                 orderBuilder.setDate(dateFormatter.format(newDate.getTime()));
-                                dateEditText.setText(dateFormatter.format(newDate.getTime()));
+                                dateEditText.setText(dateFormatterSimp.format(newDate.getTime()));
                             }
                         },
                         now.get(Calendar.YEAR),
@@ -140,11 +143,15 @@ public class OrderPrepareFragment extends Fragment {
             public void onClick(View v) {
                 List<String> list = new LinkedList<String>();
                 list.add("order");
+
+                list.add(FirebaseAuth.getInstance().getCurrentUser().getUid());
                 list.add(dateFormatter.format(Calendar.getInstance().getTime()));
                 Order order;
                 order =  orderBuilder.buildOrder();
                 orderStorage.writeObject(order, list);
-
+                eraseEditField(0);
+                hospitalEditText.setText("");
+                Toast.makeText(getActivity(), "Запись успешно создана", Toast.LENGTH_SHORT).show();
             }
         });
 
